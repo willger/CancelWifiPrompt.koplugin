@@ -3,4 +3,6 @@
 Automatically cancels KOReader's `Do you want to turn on Wi-Fi?` prompt on
 Android devices without opening the Wi-Fi settings menu.
 
-To install it, rename the folder to `CancelWifiPrompt.koplugin` and copy it into KOReader's `plugins` directory.
+This is created for and tested on the Barnes and Noble Nook Glow Light 4 plus. (BNRV1300)
+
+To install it, copy the folder `CancelWifiPrompt.koplugin` into KOReader's `plugins` directory.
