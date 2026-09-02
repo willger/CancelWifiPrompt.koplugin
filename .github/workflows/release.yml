@@ -1,4 +1,4 @@
-name: ReleaseTest
+name: Release
 
 on:
   push:
@@ -27,9 +27,8 @@ jobs:
           set -e
           VERSION=${{ steps.version.outputs.version }}
           ARCHIVE_NAME=${{ github.event.repository.name }}-v${VERSION}.zip
-          cd ..
-          rm -rf "${ARCHIVE_NAME}"
-          zip ${{ github.event.repository.name }}/${ARCHIVE_NAME} ${{ github.event.repository.name }}/*.lua
+          rm -f "${ARCHIVE_NAME}"
+          zip -r "${ARCHIVE_NAME}" "${{ github.event.repository.name }}"/*.lua
           echo "archive_name=${ARCHIVE_NAME}" >> $GITHUB_ENV
       
       - name: Create GitHub Release
